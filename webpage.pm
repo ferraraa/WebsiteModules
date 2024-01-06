@@ -24,7 +24,7 @@ sub makeDropDownMenu {
 ## This function creates a group of buttons for a webform
 sub makeButtons {
 
-	my ( $cgi, $buttontype, $name, $title, $buttons, $default) = @_;
+	my ( $cgi, $buttontype, $name, $title, $buttons, $default, $columns) = @_;
 	if ( $buttontype eq 'checkbox' ) {
 		print $cgi ->div(
 						  $cgi->label( { -for => $name }, $title ),
@@ -32,9 +32,9 @@ sub makeButtons {
 												-name      => $name,
 												-values    => $buttons,
 												-onchange  => 'this.form.submit()',
-												-default   => 'unchecked',
+												-default   => $default,
 												-linebreak => 'true',
-												-columns => 8
+												-columns => $columns
 						  ),
 		);
 	}
