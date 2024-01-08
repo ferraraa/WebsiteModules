@@ -50,7 +50,7 @@ sub makeButtons {
 											 -onchange  => 'this.form.submit()',
 											 -default   => $default,
 											 -linebreak => 'true',
-											 -columns => 8
+											 -columns => $columns
 						  ),
 		);
 
