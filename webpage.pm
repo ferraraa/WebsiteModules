@@ -159,7 +159,8 @@ sub makeForm_WebpageHeaderAndyStyle {
         $cgi->submit(
             -name   => "Reset the Webpage",
             -id     => "Reset the Webpage",
-            -values => "Reset"
+            -values => "Reset",
+            -type => "reset"
         )
     );
 }
